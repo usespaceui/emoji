@@ -1,0 +1,1 @@
+export { generateEmojiLib } from './emoji-library.scripts'

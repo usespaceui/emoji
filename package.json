@@ -1,0 +1,122 @@
+{
+  "name": "@usespaceui/emoji",
+  "version": "0.1.0",
+  "description": "A modern, unified emoji library for React featuring Apple, Fluent (Microsoft), Telegram, Twemoji, Blobmoji, and Google Noto emojis.",
+  "author": {
+    "name": "SpaceUI",
+    "email": "hello@spaceui.one",
+    "url": "https://www.spaceui.one"
+  },
+  "contributors": [
+    {
+      "name": "SpaceUI Team",
+      "email": "hello@spaceui.one",
+      "url": "https://www.spaceui.one"
+    }
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/usespaceui"
+  },
+  "license": "MIT",
+  "homepage": "https://www.spaceui.one/tools/emoji",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usespaceui/emoji.git"
+  },
+  "bugs": {
+    "url": "https://github.com/usespaceui/emoji/issues",
+    "email": "hello@spaceui.one"
+  },
+  "keywords": [
+    "emoji",
+    "fluent-emoji",
+    "apple-emoji",
+    "telegram-emoji",
+    "twemoji",
+    "blobmoji",
+    "noto-emoji",
+    "react",
+    "spaceui",
+    "icons"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist",
+    "src/data"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.mjs"
+      },
+      "require": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.js"
+      }
+    },
+    "./data": {
+      "import": {
+        "types": "./dist/data.d.ts",
+        "default": "./dist/data.mjs"
+      },
+      "require": {
+        "types": "./dist/data.d.ts",
+        "default": "./dist/data.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "generate:manifest": "tsx scripts/generate-manifest.ts",
+    "test": "tsx test/test-runner.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "cn": "^0.2.5",
+    "emoji-regex": "^10.5.0",
+    "lottie-web": "^5.13.0",
+    "url-join": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tsup": "^8.5.0",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.2"
+  }
+}
