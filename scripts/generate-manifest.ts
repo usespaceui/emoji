@@ -10,10 +10,7 @@ const EXT_FORMAT: Record<string, string> = {
 }
 
 const candidatePaths = [
-  path.resolve(__dirname, '../../ui/cdn/common/emoji'),
-  path.resolve(__dirname, '../../../../../design-system/packages/ui/cdn/common/emoji'),
-  path.resolve(__dirname, '../../../../design-system/packages/ui/cdn/common/emoji'),
-  'F:/laragon/www/oricodes_plugin/_uikit/uisource/space-ui/packages/ui/cdn/common/emoji',
+  path.resolve(__dirname, '../../../hub/cdn/common/emoji'),
 ]
 const EMOJI_CDN_DIR = candidatePaths.find((p) => fs.existsSync(p)) || candidatePaths[0]
 
